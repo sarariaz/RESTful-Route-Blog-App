@@ -1,0 +1,25 @@
+<%  include partials/header %>
+<div class="forpadding">
+<div class="ui centered card">
+    <div class="image">
+      <img src=" <%= blog.image %>">
+    </div>
+    <div class="content">
+      <a class="header"> <%= blog.title %></a>
+     
+      <div class="description">
+        <%= blog.body %>
+      </div>
+    </div>
+    <div class="extra content">
+     <span> <%= blog.created.toDateString() %> </span>
+    </div>
+    <a href="/blogs/<%= blog._id %>/edit" id="foreditbutton">EDIT</a>
+    <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST"  class="ui form">
+        <button class="ui red basic button" id="forbutton">DELETE</button>
+    </form>
+    
+  </div>
+</div>
+
+<% include partials/footer %>

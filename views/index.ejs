@@ -1,0 +1,53 @@
+<%  include partials/header %>
+<h1 id="indexwala">
+    Welcome to the <b>BLOG</b> Site!
+</h1>
+<!--<% blogs.forEach(function(blog){ %>
+    <div>
+        <h2> <%= blog.title %></h2>
+        <img src=" <%= blog.image %>" >
+        <span><%= blog.created %> </span>
+        <p> <%= blog.body %> </p>
+    </div>
+
+<% }); %> <!-->
+
+
+
+ <!---- <div class="ui link cards">
+        <% blogs.forEach(function(blog){ %>
+    
+        <div class="image">
+          <img src="  <%= blog.image %> ">
+        </div>
+        <div class="content">
+          <a class="header">  <%= blog.title %></a>
+          <div class="description">
+                <%= blog.body %>
+          </div>
+        </div>
+        <% }); %>
+ </div> <!-->
+
+
+
+ <% blogs.forEach(function(blog){ %>
+  <div class="forwidth">
+  <div class="ui centered cards">
+ <div class="card">
+  <div class="image">
+    <img src=" <%= blog.image %>">
+  </div>
+  <div class="content">
+    <div class="header">  <%= blog.title %> </div>
+    
+    <a href="/blogs/<%=blog._id %>">Read More</a>
+  </div>
+  
+ 
+</div>
+</div>
+</div>
+<% }); %>
+
+<% include partials/footer %>
